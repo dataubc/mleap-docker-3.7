@@ -16,5 +16,7 @@ COPY mleap-spring-boot bin/mleap-spring-boot
 RUN mkdir -p /models
 COPY xgboost0124.zip /models
 COPY config.json /models
+
 ENV mleap.model.config /models/config.json
+
 RUN chmod +x ./bin/mleap-spring-boot
